@@ -1,12 +1,12 @@
 import React from 'react';
-import { AppBar, Toolbar } from '@material-ui/core'
+import { AppBar, Toolbar, Typography } from '@material-ui/core'
 
 const TopNavBar = ()=>{
     return(
         <React.Fragment>
-            <AppBar>
+            <AppBar color="default">
                 <Toolbar>
-                    Hello
+                    <Typography variant ="h5"> Resume</Typography>
                 </Toolbar>
             </AppBar>
         </React.Fragment>
