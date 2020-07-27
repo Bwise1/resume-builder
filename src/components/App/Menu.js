@@ -9,7 +9,7 @@ import Log from '../../assets/images/login.png';
 
 const Menu = () =>{
     return(
-        <Grid container  justify="space-between">
+        <Grid item container  justify="space-between">
             <MenuItem direction= "column" icon={Content} menuItem="Content"/>
             <MenuItem direction= "column" icon={Design} menuItem="Design" />
             <MenuItem direction= "column" icon={Check} menuItem="Check"/>

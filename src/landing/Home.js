@@ -3,7 +3,7 @@ import hero from '../images/hero.svg';
 import { Typography, Container, Button } from '@material-ui/core';
 import Typing from 'react-typing-animation';
 import Styles from '../landing/Home.module.css';
-import TopNavBar from './TopNavBar'
+import TopNavBar from './TopNavBar';
 
 const Header = ()=>{
     const handleClick = () => {
