@@ -8,7 +8,8 @@ const useStyles = makeStyles((theme) => ({
         height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        position: 'fixed',
+        position: 'absolute',
+        left: '0px',
         borderRadius: 0
         
     }
@@ -19,7 +20,7 @@ const SideBar = () =>{
     const classes = useStyles();
 
     return (
-        <Paper elevation="14" className = {classes.paper}>
+        <Paper elevation= {14} className = {classes.paper}>
             <Menu />
         </Paper>
     );

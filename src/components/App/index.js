@@ -1,8 +1,14 @@
 import React from 'react';
-import { AppBar, Toolbar, makeStyles } from '@material-ui/core';
+import { AppBar, Toolbar, makeStyles, CssBaseline, Grid } from '@material-ui/core';
+import { reduxForm } from 'redux-form';
+
 import Menu from './Menu';
 import SideBar from './SideBar';
-import { reduxForm } from 'redux-form';
+import FormInput from './artboard/FormInput';
+import Preview from './artboard/Preview';
+import EditField from '../../shared/EditField'
+
+
 
 
 
@@ -20,6 +26,18 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down("sm")]: {
             display: 'none'
         },
+    },
+    content: {
+        paddingLeft: 0,
+        height: "auto",
+        width: '100%',
+        [theme.breakpoints.up("md")]: {
+            paddingLeft: '130px',
+        },
+    }, 
+    item: {
+        padding: 30,
+        marginTop: '60px'
     }
   }));
 
@@ -29,7 +47,7 @@ const Content = () => {
         <div>
             {/*div class for top NavBar menu that only shows on Medium Screens*/}
             <div className={classes.mdMenu}>
-                <AppBar color="default">
+                <AppBar color="default" position="static">
                     <Toolbar>
                         <div className={classes.MenuItems}>
                            <Menu />
@@ -41,17 +59,19 @@ const Content = () => {
             <div className={classes.lsMenu}>
                 <SideBar /> 
             </div>
-
-             {/*div class for Form Items (Card)*/}
-            <div>
+            <CssBaseline />
+            <div className={classes.content}>
+                <Grid container justify="center" >
+                    <Grid className={classes.item} item xs={12} md={6} >
+                        <FormInput /> 
+                    </Grid>
+                    <Grid className={classes.item} item xs={12} md={6} >
+                        <EditField />
+                    </Grid>
+                </Grid>
+            </div>
             
-            </div>
-
-             {/*div class for preview */}
-            <div>
-            </div>
-        </div>
-        
+        </div>    
     );
 }
 

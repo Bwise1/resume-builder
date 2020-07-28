@@ -9,6 +9,10 @@ const FormTextField = ({ input, label, meta: { touched, error }, ...custom },) =
             label={label}
             floatingLabelText={label}
             errorText={touched && error}
+            fullWidth
+            margin="normal"
+            size="small"
+            variant= "outlined"
             {...input}
             {...custom}
         />
